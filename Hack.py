@@ -86,7 +86,7 @@ class about:
 		self.url=url
 	def tentang(self):
 		try:
-			anjir=req.get(f"{self.url}/profile.php",cookies=kueh).text
+			anjir=req.get(f{self.url}/profile.php,cookies=kueh).text
 		except(req.exceptions.ConnectionError,req.exceptions.ChunkedEncodingError,req.exceptions.ReadTimeout):
 			exit("[!] Kesalahan Pada Koneksi")
 		if "mbasic_logout_button" not in anjir:
