@@ -64,7 +64,7 @@ except:
 	pass
 def hasil(ngocok,ismylife):
 	if len(ngocok) != 0 or len(ismylife) != 0:
-		print(f\n{M}[#] crack selesai)
+		
 		if len(ngocok)==0:pass
 		else:print("[*] Hasil Ok Disimpan  di  : ok.txt \x1b[0m")
 		if len(ismylife)==0:pass
