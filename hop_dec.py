@@ -65,7 +65,8 @@ def logo():
 \033[1;37m     \033[1;37m➤ AUTHOR   : RISHU KHAN           
 \033[1;37m     \033[1;37m➤ VERSION  : 3.0                  
 \033[1;37m     \033[1;37m➤ FACEBOOK : www.fb.com/al3x.rishu 
-\033[1;37m  ╚════════════════════════════════════╝"""def method_menu():
+\033[1;37m  ╚════════════════════════════════════╝"""
+def method_menu():
     os.system("clear")
     logo()
     print("")
