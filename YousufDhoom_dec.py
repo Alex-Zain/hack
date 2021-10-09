@@ -1,16 +1,5 @@
-
-# Python Auto Dis Parser 1.1.0
-# Author : HTR-TECH | TAHMID RAYAT
-# https://linktr.ee/tahmid.rayat
-# https://fb.me/tahmid.rayat.official
-# ------------------------------------------
-# Embedded File   : YousufDhoom/YousufDhoom.py
-# Python Bytecode : 2.7 (62211)
-# Decompiled at   : Mon Oct 12 11:01:37 2020
-# ------------------------------------------
-
-#!/usr/bin/python2
 #coding=utf-8
+#!/usr/bin/python2
 #The Credit For This Code Goes To Muhammad Yousuf
 #If You Wanna Take Credits For This Code, Please Look Yourself Again...
 #Reserved2020
