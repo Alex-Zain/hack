@@ -51,8 +51,21 @@ c2 = "\033[0;97m"
 c3 = "\033[1;31m"
 #MyLogo
 def logo():
-    os.system('echo -e "\n\n   ╔════════════════════════════════════╗\n\n       .d8b.  db      d8888b. db    db\n      d8' `8b 88      VP  `8D `8b  d8'\n      88ooo88 88        oooY'  `8bd8'\n      88~~~88 88        ~~~b.  .dPYb. \n      88   88 88booo. db   8D .8P  Y8.\n     YP   YP Y88888P Y8888P' YP    YP\n\n  ╚════════════════════════════════════╝\n\n       [\033[1;97m\033[1;41mIF YOU DREAM IT CAN YOU DO IT\033[0m\x1b[1;37m]    \n\n  ╔════════════════════════════════════╗\n\n     \033[1;37m➤ AUTHOR   : RISHU KHAN\n     \033[1;37m➤ VERSION  : 3.0\n     \033[1;37m➤ FACEBOOK : www.fb.com/al3x.rishu \n\n  ╚════════════════════════════════════╝" | lolcat')
-def method_menu():
+    logo: """
+\033[1;37m  ╔════════════════════════════════════╗
+\033[1;37m      .d8b.  db      d8888b. db    db
+\033[1;37m     d8' `8b 88      VP  `8D `8b  d8'
+\033[1;37m     88ooo88 88        oooY'  `8bd8'
+\033[1;37m     88~~~88 88        ~~~b.  .dPYb.
+\033[1;37m     88   88 88booo. db   8D .8P  Y8.
+\033[1;37m     YP   YP Y88888P Y8888P' YP    YP
+\033[1;37m  ╚════════════════════════════════════╝
+       [\033[1;97m\033[1;41mIF YOU DREAM IT CAN YOU DO IT\033[0m\x1b[1;37m]    
+\033[1;37m  ╔════════════════════════════════════╗
+\033[1;37m     \033[1;37m➤ AUTHOR   : RISHU KHAN           
+\033[1;37m     \033[1;37m➤ VERSION  : 3.0                  
+\033[1;37m     \033[1;37m➤ FACEBOOK : www.fb.com/al3x.rishu 
+\033[1;37m  ╚════════════════════════════════════╝"""def method_menu():
     os.system("clear")
     logo()
     print("")
