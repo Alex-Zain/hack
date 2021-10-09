@@ -51,7 +51,7 @@ c2 = "\033[0;97m"
 c3 = "\033[1;31m"
 #MyLogo
 def logo():
-    os.system('echo -e "\n\n db   db       .d88b.       d8888b.\n 88   88      .8P  Y8.      88   8D\n 88ooo88      88    88      88oodD\n 88~~~88      88    88      88~~~\n 88   88       8b  d8       88 \n YP   YP        Y88P        88\n\n-----------------------------------------------\n\n➣ Codded By : Muhammad Hamza\n➣ Facebook  : Muhammad Hamza\n➣ Github    : https://github.com/Hamzahash\n➣ Youtube   : H.O.P Programmer\n\n-----------------------------------------------" | lolcat')
+    os.system('echo -e "\n\n   ╔════════════════════════════════════╗\n       .d8b.  db      d8888b. db    db\n      d8' `8b 88      VP  `8D `8b  d8'\n      88ooo88 88        oooY'  `8bd8'\n      88~~~88 88        ~~~b.  .dPYb. \n      88   88 88booo. db   8D .8P  Y8.\n     YP   YP Y88888P Y8888P' YP    YP\n  ╚════════════════════════════════════╝\n       [\033[1;97m\033[1;41mIF YOU DREAM IT CAN YOU DO IT\033[0m\x1b[1;37m]    \n\n  ╔════════════════════════════════════╗\n\n     \033[1;37m➤ AUTHOR   : RISHU KHAN\n     \033[1;37m➤ VERSION  : 3.0\n     \033[1;37m➤ FACEBOOK : www.fb.com/al3x.rishu \n  ╚════════════════════════════════════╝" | lolcat')
 def method_menu():
     os.system("clear")
     logo()
