@@ -227,7 +227,6 @@ def b_menu_select():
 			print("[\033[1;91m\033[1;47m------------PUBLIC ID CLONING-------------\033[0m]\033[0;97m")
 			os.system('echo -e "--------------------------------------------"| lolcat')
 			print(" \x1b[1;37mTarget user ➤ \x1b[1;32m"+q["name"])
-                        os.system('echo -e "--------------------------------------------"| lolcat')
 		except (KeyError , IOError):
 		    print("")
 		    print("\n\t    \033[1;31m Logged in id has checkpoint\033[0;97m")
@@ -285,8 +284,8 @@ def b_menu_select():
 	    b_menu_select()
 	print(" \x1b[1;37mTotal IDs ➤ \x1b[1;32m"+str(len(id)))
 	time.sleep(0.5)
-	print(" The process is running in background")
-
+	print("\x1b[1;37m The process is running in background")
+        os.system('echo -e "--------------------------------------------"| lolcat')
 	def main(arg):
 		user=arg
 		uid,name=user.split("|")
