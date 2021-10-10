@@ -50,7 +50,7 @@ c = "\033[1;32m"
 c2 = "\033[0;97m"
 c3 = "\033[1;31m"
 #MyLogo
-
+def logo():
 logo = """
 \033[1;37m  ╔════════════════════════════════════╗
 \033[1;37m      .d8b.  db      d8888b. db    db
@@ -98,7 +98,7 @@ def login():
 def login_select():
     afza = raw_input(" \x1b[1;37mChoose ➤ \x1b[1;32m")
     if afza =="1":
-        os.system("clear")
+        os.system('clear')
         print logo
         print("[\033[1;91m\033[1;47m---------------Login token----------------\033[0m]\033[1;37m")
         os.system('echo -e "--------------------------------------------"| lolcat')
@@ -130,7 +130,7 @@ def login_select():
         print("")
         login_select()
 def login_fb():
-	os.system("clear")
+	os.system('clear')
 	print logo
 	print("[\033[1;91m\033[1;47m------------Login With Fb/ID--------------\033[0m]\033[1;37m")
 	os.system('echo -e "--------------------------------------------"| lolcat')
@@ -164,8 +164,8 @@ def login_fb():
 		login_fb()
 def b_menu():
     global token
-    os.system("clear")
-    logo()
+    os.system('clear')
+    print logo
     try:
         token = open(".fb_token.txt","r").read()
     except (KeyError , IOError):
@@ -191,7 +191,7 @@ def b_menu():
         time.sleep(1)
         raw_input(" Press enter to try again \033[0;97m")
         b_menu()
-    os.system("clear")
+    os.system('clear')
     print logo
     print("\t  "+c+"Logged In User"+ok+c2)
     print("\033[1;37m[\033[1;91m\033[1;47m------------Free mode Cloning-------------\033[0m]\033[1;37m")
@@ -210,8 +210,8 @@ def b_menu_select():
 	oks=[]
 	cps=[]
 	if select =="1":
-		os.system("clear")
-		logo()
+		os.system('clear')
+		print logo
 		print("")
 		os.system('echo -e "\t    Public ID Cloning " | lolcat')
 		print("")
@@ -241,7 +241,7 @@ def b_menu_select():
 			nm=na.rsplit(" ")[0]
 			id.append(uid+'|'+nm)
 	elif select =="2":
-		os.system("clear")
+		os.system('clear')
 		print logo
 		print("[\033[1;91m\033[1;47m------------FOLLOWERS ID  CLONING-------------\033[0m]\033[0;97m")
 		idt = raw_input("\x1b[1;37m Public ID ➤ \x1b[1;32m")
@@ -412,33 +412,27 @@ def b_menu_select():
 		
 	p = ThreadPool(30)
 	p.map(main, id)
-	print (" ")
-	print (47*"-")
-	print ("")
-	print (" Process has completed")
-	print (" Total Cp/Ok : "+str(len(cps)) + "/"+str(len(oks)))
-	print ("")
-	print (47*"-")
-	print ("")
-	raw_input(" Press enter to back ")
+        os.system('echo -e "--------------------------------------------"| lolcat')
+	print (" \x1b[1;37mProcess has completed")
+	print (" \x1b[1;37mTotal Cp/Ok : "+str(len(cps)) + "/"+str(len(oks)))
+        os.system('echo -e "--------------------------------------------"| lolcat')
+	raw_input(" \x1b[1;37mPress enter to back ")
 	b_menu()
 def view_token():
-    os.system("clear")
-    logo()
-    print("")
+    os.system('clear')
+    print logo
     print("\t    \033[1;32mLogged In Token \033[0;97m")
-    print("")
-    print(" Token : " )
+    os.system('echo -e "--------------------------------------------"| lolcat')
+    print("\x1b[1;37m Token ➤ \x1b[1;32m" )
+    os.system('echo -e "--------------------------------------------"| lolcat')
     os.system("cat .fb_token.txt")
     print("")
-    raw_input(" Press enter to main menu ")
+    raw_input(" \x1b[1;37mPress enter to main menu ")
     b_menu()
 def logout():
-    os.system("clear")
-    logo()
-    print("")
+    os.system('clear')
+    print logo
     print("\t    "+c+"Logout Menu"+c2)
-    print("")
     raw_input(" Do you really want to logout ? ")
     os.system("rm -rf .fb_token.txt")
     method_menu()
@@ -449,28 +443,27 @@ def extract_dob():
     except (KeyError , IOError):
         time.sleep(1)
         login()
-    os.system("clear")
-    logo()
-    print("")
+    os.system('clear')
+    print logo
     print("\t    "+c+"Extract DOB Of ID"+c2)
-    print("")
+    os.system('echo -e "--------------------------------------------"| lolcat')
     print("[1] Grab from friendlist")
     print("[2] Grab from followers")
     print("[3] Grab single id")
     print("[4] Back")
-    print("")
+    os.system('echo -e "--------------------------------------------"| lolcat')
     dob_select()
 def dob_select():
 	select = raw_input("\n Choose Option >>> ")
 	id=[]
 	nms=[]
 	if select =="1":
-		os.system("clear")
-		logo()
-		print("")
+		os.system('clear')
+		print logo
+		os.system('echo -e "--------------------------------------------"| lolcat')
 		print("\t    \033[1;32mGrab DOB From Friendlist\033[0;97m")
-		print("")
-		idt = raw_input(" Put Id/user : ")
+		idt = raw_input(" \x1b[1;37mPut Id/user ➤ \x1b[1;37m ")
+                os.system('echo -e "--------------------------------------------"| lolcat')
 		try:
 			r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token, headers=header)
 			q = json.loads(r.text)
@@ -489,12 +482,12 @@ def dob_select():
 			nm=na.rsplit(" ")[0]
 			id.append(uid+'|'+nm)
 	elif select =="2":
-		os.system("clear")
-		logo()
-		print("")
-		print("\033[1;32m Grab DOB From Followers\033[0;97m")
-		print("")
-		idt = raw_input(" Put Id/user : ")
+		os.system('clear')
+		print logo
+		os.system('echo -e "--------------------------------------------"| lolcat')
+		print("\033[1;37m Grab DOB From Followers\033[0;97m")
+		idt = raw_input(" \x1b[1;37mPut Id/user ➤ \x1b[1;32m")
+                os.system('echo -e "--------------------------------------------"| lolcat')
 		try:
 			r = requests.get("https://graph.facebook.com/"+idt+"?access_token="+token, headers=header)
 			q = json.loads(r.text)
@@ -518,14 +511,12 @@ def dob_select():
 	else:
 	    print("")
 	    print ("\t    \033[1;31mSelect valid option\033[0;97m")
-	    print("")
 	    dob_select()
-	print (" Total IDs : "+str(len(id)))
-	print(" The Process has started")
-	print(" Note : This is for testing only")
-	print("")
-	print 47*("-")
-	print('')
+        os.system('echo -e "--------------------------------------------"| lolcat')
+	print (" \x1b[1;37mTotal IDs : "+str(len(id)))
+	print(" \x1b[1;37mThe Process has started")
+        os.system('echo -e "--------------------------------------------"| lolcat')
+	print("\x1b[1;37m Note : This is for testing only")
 
 	def main(arg):
 		user=arg
@@ -545,15 +536,11 @@ def dob_select():
 		
 	p = ThreadPool(30)
 	p.map(main, id)
-	print('')
-	print 47*'-'
-	print('')
-	print (' Process has completed')
-	print(' Total DOB :  '+str(len(nms)))
-	print('')
-	print 47*('-')
-	print('')
-	raw_input('\n Press enter to back ')
+	os.system('echo -e "--------------------------------------------"| lolcat')
+	print ('\x1b[1;37m Process has completed')
+	print(' \x1b[1;37mTotal DOB :  '+str(len(nms)))
+	os.system('echo -e "--------------------------------------------"| lolcat')
+	raw_input('\n \x1b[1;37mPress enter to back ')
 	extract_dob()
 def dob():
     global token
@@ -562,14 +549,14 @@ def dob():
     except (KeyError , IOError):
         time.sleep(1)
         login()
-    os.system("clear")
-    logo()
-    print("")
+    os.system('clear')
+    print logo
+    os.system('echo -e "--------------------------------------------"| lolcat')
     print("\t    "+c+"Find DOB Of ID"+c2)
-    print("")
     idt = raw_input(" Put id/user : ")
-    os.system("clear")
-    logo()
+    os.system('echo -e "--------------------------------------------"| lolcat')
+    os.system('clear')
+    print logo
     print("")
     os.system('echo -e "\t   Finding DOB  " | lolcat')
     time.sleep(1)
@@ -578,17 +565,17 @@ def dob():
         z = json.loads(r)
         dobs = z["birthday"]
     except (KeyError , IOError):
-        os.system("clear")
-        logo()
-        print("")
+        os.system("clear')
+        print logo
+        os.system('echo -e "--------------------------------------------"| lolcat')
         print("\t    "+c+"Find DOB Of ID"+c2)
-        print("")
-        print(" DOB not found")
+        os.system('echo -e "--------------------------------------------"| lolcat')
+        print(" \x1b[1;31mDOB not found")
         print("")
         raw_input(" Press enter to try again ")
         extract_dob()
-    os.system("clear")
-    logo()
+    os.system('clear')
+    print logo
     print("")
     print("\t    "+c+"Find DOB Of ID"+c2)
     print("")
@@ -608,8 +595,8 @@ def conf():
         b_menu()
 def l_menu():
     global token
-    os.system("clear")
-    logo()
+    os.system('clear')
+    print logo
     try:
         token = open(".fb_token.txt","r").read()
     except (KeyError , IOError):
@@ -635,8 +622,8 @@ def l_menu():
         time.sleep(1)
         raw_input(" Press enter to try again ")
         b_menu()
-    os.system("clear")
-    logo()
+    os.system('clear')
+    print logo
     print("")
     print(47*"-")
     print("")
@@ -656,8 +643,8 @@ def l_menu_select():
 	oks=[]
 	cps=[]
 	if select =="1":
-		os.system("clear")
-		logo()
+		os.system('clear')
+		print logo
 		print("")
 		os.system('echo -e "\t    Public ID Cloning " | lolcat')
 		print("")
@@ -690,8 +677,8 @@ def l_menu_select():
 			nm=na.rsplit(" ")[0]
 			id.append(uid+'|'+nm)
 	elif select =="2":
-		os.system("clear")
-		logo()
+		os.system('clear')
+		print logo
 		print("")
 		os.system('echo -e "\t    Public ID Cloning " | lolcat')
 		print("")
@@ -866,15 +853,11 @@ def l_menu_select():
 	
 	p = ThreadPool(30)
 	p.map(main,id)
-	print("")
-	print(47*"-")
-	print("")
-	print(" The process has completed")
-	print(" Total Ok/Cp :"+str(len(oks)))+"/"+str(len(cps))
-	print("")
-	print(47*"-")
-	print("")
-	raw_input(" Press entet to back ")
+	os.system('echo -e "--------------------------------------------"| lolcat')
+	print(" \x1b[1;37mThe process has completed")
+	print("\x1b[1;37m Total Ok/Cp :"+str(len(oks)))+"/"+str(len(cps))
+	os.system('echo -e "--------------------------------------------"| lolcat')
+	raw_input(" \x1b[1;37mPress entet to back ")
 	l_menu()
 if __name__ == '__main__':
     method_menu()
