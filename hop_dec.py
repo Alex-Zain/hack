@@ -50,7 +50,7 @@ c = "\033[1;32m"
 c2 = "\033[0;97m"
 c3 = "\033[1;31m"
 #MyLogo
-def logo():
+
 logo = """
 \033[1;37m  ╔════════════════════════════════════╗
 \033[1;37m      .d8b.  db      d8888b. db    db
@@ -87,7 +87,7 @@ def method_menu_select():
         print("")
         method_menu_select()
 def login():
-    os.system("clear")
+    os.system('clear')
     print logo
     print("[\033[1;91m\033[1;47m---------------LOGIN MENU-----------------\033[0m]")
     os.system('echo -e "--------------------------------------------"| lolcat')
