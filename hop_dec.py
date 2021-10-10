@@ -565,7 +565,7 @@ def dob():
         z = json.loads(r)
         dobs = z["birthday"]
     except (KeyError , IOError):
-        os.system("clear')
+        os.system('clear')
         print logo
         os.system('echo -e "--------------------------------------------"| lolcat')
         print("\t    "+c+"Find DOB Of ID"+c2)
