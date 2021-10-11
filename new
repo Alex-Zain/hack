@@ -61,8 +61,8 @@ def login():
         print logo
         print("[\033[1;91m\033[1;47m---------------LOGIN MENU-----------------\033[0m]")
         os.system('echo -e "--------------------------------------------"| lolcat')
-        print ' \x1b[1;97m ➤ [1] FACEBOOK ID/PASS LOGIN\n'
-        print ' \x1b[1;97m ➤ [2] FACEBOOK TOKEN LOGIN\n'
+        print ' \x1b[1;97m ➤ [1] FACEBOOK ID/PASS LOGIN'
+        print ' \x1b[1;97m ➤ [2] FACEBOOK TOKEN LOGIN'
         print ' \x1b[1;97m ➤ [3] Back '
         os.system('echo -e "--------------------------------------------"| lolcat')
         log_select()
@@ -151,8 +151,8 @@ def menu():
     print '   \x1b[1;37mActive Token ➤ \x1b[1;32m' + name
     print("[\033[1;91m\033[1;47m---------------CRACING MENU---------------\033[0m]\033[0;97m")
     os.system('echo -e "--------------------------------------------"| lolcat')  
-    print ' \x1b[1;97m ➤ [1] CRACK AUTO PASS\n'
-    print ' \x1b[1;97m ➤ [2] CRACK CHOICE PASS\n'
+    print ' \x1b[1;97m ➤ [1] CRACK AUTO PASS'
+    print ' \x1b[1;97m ➤ [2] CRACK CHOICE PASS'
     print ' \x1b[1;97m ➤ [3] BACK'
     os.system('echo -e "--------------------------------------------"| lolcat')
     menu_option()
