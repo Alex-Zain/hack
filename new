@@ -33,7 +33,9 @@ logo = """
 def main():
     os.system('clear')
     print logo
+    print ("")
     print("[\033[1;91m\033[1;47m--------------START CRECKING--------------\033[0m\033[1;37m]")
+    print ("")
     os.system('echo -e "--------------------------------------------"| lolcat')
     print ' \x1b[1;97m ➤ [1] START CLONING'
     os.system('echo -e "--------------------------------------------"| lolcat')
@@ -59,9 +61,9 @@ def login():
         print logo
         print("[\033[1;91m\033[1;47m---------------LOGIN MENU-----------------\033[0m]")
         os.system('echo -e "--------------------------------------------"| lolcat')
-        print ' \x1b[1;92m ➤ [1] FACEBOOK ID/PASS LOGIN\n'
-        print ' \x1b[1;92m ➤ [2] FACEBOOK TOKEN LOGIN\n'
-        print ' \x1b[1;93m ➤ [3] Back '
+        print ' \x1b[1;97m ➤ [1] FACEBOOK ID/PASS LOGIN\n'
+        print ' \x1b[1;97m ➤ [2] FACEBOOK TOKEN LOGIN\n'
+        print ' \x1b[1;97m ➤ [3] Back '
         os.system('echo -e "--------------------------------------------"| lolcat')
         log_select()
 
@@ -323,8 +325,8 @@ def crack_select():
         crack_select()
     os.system('echo -e "--------------------------------------------"| lolcat')
     print ' \x1b[1;92m Total IDs : ' + str(len(id))
-    print ' \x1b[1;92m On off flight mode if no result'
-    print ' \x1b[1;93m Press ctrl + z to stop'
+    print ' \x1b[1;97m On off flight mode if no result'
+    print ' \x1b[1;97m Press ctrl + z to stop'
     os.system('echo -e "--------------------------------------------"| lolcat')
 
     def main(arg):
